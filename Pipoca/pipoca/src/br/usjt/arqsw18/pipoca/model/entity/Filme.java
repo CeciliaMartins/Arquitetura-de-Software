@@ -21,13 +21,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Filme {
 	@Id
 	@NotNull 
-	//@Min(value=1)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	@NotNull
 	@Size(min=2, max=100, message="Tamanho entre 2 e 100 caracteres")
 	private String titulo;
-	@Size(max=4000, message="Tamanho entre 1 e 4000 caracteres")
+	@Size(max=4000, message="Tamanho entre 20 e 4000 caracteres")
 	private String descricao;
 	@Max(value=100)
 	@Min(value=1)
